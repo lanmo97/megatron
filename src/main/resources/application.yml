@@ -1,0 +1,32 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: megatron
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:                           # 指定数据源
+    platform: h2                        # 指定数据源类型
+    schema: classpath:schema.sql        # 指定h2数据库的建表脚本
+    data: classpath:data.sql            # 指定h2数据库的数据脚本
+
+  security:                             # 配置用户认证
+    user:
+      name: sct
+      password: sct2020
+      role: USER
+
+logging:                                # 配置日志级别，让hibernate打印出执行的SQL
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+
+megatron:
+  filePath: /Users/xiaodong/Documents/service-computing/Public
+  #filePath: /home/user/sct-resource
+
