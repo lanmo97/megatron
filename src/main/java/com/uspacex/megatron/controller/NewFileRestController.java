@@ -31,7 +31,7 @@ public class NewFileRestController {
     @Autowired
     private FileService fileService;
 
-    @GetMapping("/filetree")
+    @GetMapping("/files/tree")
     public FileModel fileTree(HttpSession session) {
         FileModel fileModel = new FileModel();
         fileService.fileTree(resourcePath, fileModel, new String[]{"pdf", "mp4", "jpg", "mp3", "txt", "md"}, 5);

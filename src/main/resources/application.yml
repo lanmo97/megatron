@@ -3,6 +3,16 @@ server:
 spring:
   application:
     name: megatron
+  thymeleaf:
+    cache: false
+    check-template-location: true
+    servlet:
+      content-type: text/html
+    enabled: true
+    encoding: utf-8
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
   jpa:
     generate-ddl: false
     show-sql: true
@@ -27,6 +37,6 @@ logging:                                # 配置日志级别，让hibernate打�
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
 
 megatron:
-  filePath: /Users/xiaodong/Documents/service-computing/Public
-  #filePath: /home/user/sct-resource
+  #filePath: /Users/xiaodong/Documents/service-computing/Public
+  filePath: /home/user/sct-resource
 
