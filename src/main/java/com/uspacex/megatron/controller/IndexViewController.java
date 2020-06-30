@@ -16,10 +16,10 @@ import java.util.*;
 
 @Slf4j
 @Controller
-public class ViewController {
+public class IndexViewController {
     private List<MessageModel> messageList;
 
-    public ViewController(ServletContext servletContext) {
+    public IndexViewController(ServletContext servletContext) {
         messageList = (List<MessageModel>) servletContext.getAttribute("MESSAGE_LIST");
         if (messageList == null) {
             messageList = new ArrayList<>();

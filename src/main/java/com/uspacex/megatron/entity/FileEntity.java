@@ -9,7 +9,8 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @Entity
-public class File {
+@Table(name = "file")
+public class FileEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
